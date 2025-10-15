@@ -139,7 +139,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "BucketEncryption"
 
 resource "aws_dynamodb_table" "SessionTable" {
   name         = var.dynamodb_table_name
-  billing_mode = "PAY_PER_REQUEST"
+  billing_mode = "PROVISIONED"
   hash_key     = "SessionId"
 
   attribute {
